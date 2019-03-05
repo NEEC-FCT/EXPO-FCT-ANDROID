@@ -1,4 +1,4 @@
-package com.ivisionblog.apps.bottomnavigationdrawer.fragments;
+package com.neec.expo.fct.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-import com.ivisionblog.apps.bottomnavigationdrawer.R;
+import com.neec.expo.fct.R;
 
-public class Cursos extends Fragment {
+public class Razoes extends Fragment {
 
 
-    public Cursos() {
+    public Razoes() {
         // Required empty public constructor
     }
 
@@ -30,7 +30,7 @@ public class Cursos extends Fragment {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        webView.loadUrl("https://expofct.neec-fct.com/cursos/");
+        webView.loadUrl("https://expofct.neec-fct.com/razoes/");
 
         return view;
     }

@@ -1,4 +1,4 @@
-package com.ivisionblog.apps.bottomnavigationdrawer;
+package com.neec.expo.fct;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

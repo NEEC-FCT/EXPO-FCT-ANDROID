@@ -1,4 +1,4 @@
-package com.ivisionblog.apps.bottomnavigationdrawer.fragments;
+package com.neec.expo.fct.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ivisionblog.apps.bottomnavigationdrawer.R;
+import com.neec.expo.fct.R;
 
 public class Map extends Fragment {
 

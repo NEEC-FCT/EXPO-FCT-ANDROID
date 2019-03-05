@@ -1,4 +1,4 @@
-package com.ivisionblog.apps.bottomnavigationdrawer;
+package com.neec.expo.fct;
 
 import android.app.FragmentTransaction;
 import android.os.Bundle;
@@ -8,11 +8,11 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Cursos;
-import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Horario;
-import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Information;
-import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Map;
-import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Razoes;
+import com.neec.expo.fct.fragments.Cursos;
+import com.neec.expo.fct.fragments.Horario;
+import com.neec.expo.fct.fragments.Information;
+import com.neec.expo.fct.fragments.Map;
+import com.neec.expo.fct.fragments.Razoes;
 
 public class MainActivity extends AppCompatActivity {
 

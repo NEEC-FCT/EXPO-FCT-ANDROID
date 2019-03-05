@@ -1,4 +1,4 @@
-package com.ivisionblog.apps.bottomnavigationdrawer;
+package com.neec.expo.fct;
 
 import android.content.Intent;
 import android.os.Bundle;
