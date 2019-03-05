@@ -9,9 +9,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.ivisionblog.apps.bottomnavigationdrawer.fragments.ButtonFragment;
-import com.ivisionblog.apps.bottomnavigationdrawer.fragments.HomeFragment;
-import com.ivisionblog.apps.bottomnavigationdrawer.fragments.ItemFragment;
+import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Cursos;
+
+import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Horario;
+import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Information;
+
+import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Map;
+import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Razoes;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,10 +24,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        changeFragment(new HomeFragment());
+        changeFragment(new Horario());
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -32,14 +37,20 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    changeFragment(new HomeFragment());
+                case R.id.navigation_horario:
+                    changeFragment(new Horario());
                     return true;
-                case R.id.navigation_dashboard:
-                    changeFragment(new ButtonFragment());
+                case R.id.navigation_info:
+                    changeFragment(new Information());
                     return true;
-                case R.id.navigation_notifications:
-                    changeFragment(new ItemFragment());
+                case R.id.navigation_mapa:
+                    changeFragment(new Map());
+                    return true;
+                case R.id.navigation_razoes:
+                    changeFragment(new Razoes());
+                    return true;
+                case R.id.navigation_cursos:
+                    changeFragment(new Cursos());
                     return true;
             }
             return false;
