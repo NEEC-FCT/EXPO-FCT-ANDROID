@@ -10,7 +10,7 @@ import android.webkit.WebView;
 
 import com.ivisionblog.apps.bottomnavigationdrawer.R;
 
-public class Information  extends Fragment {
+public class Information extends Fragment {
 
 
     public Information() {
@@ -22,7 +22,7 @@ public class Information  extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_cursos, container, false);
+        View view = inflater.inflate(R.layout.fragment_cursos, container, false);
 
 
         WebView webView = (WebView) view.findViewById(R.id.webView);
@@ -32,7 +32,7 @@ public class Information  extends Fragment {
 
         webView.loadUrl("https://expofct.neec-fct.com/Departamentos/");
 
-        return  view;
+        return view;
     }
 
 }

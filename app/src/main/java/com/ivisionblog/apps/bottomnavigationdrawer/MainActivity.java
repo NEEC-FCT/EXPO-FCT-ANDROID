@@ -7,29 +7,15 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Cursos;
-
 import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Horario;
 import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Information;
-
 import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Map;
 import com.ivisionblog.apps.bottomnavigationdrawer.fragments.Razoes;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
-
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        changeFragment(new Horario());
-    }
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -58,7 +44,18 @@ public class MainActivity extends AppCompatActivity {
 
     };
 
-    private void changeFragment(Fragment fm){
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
+
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        changeFragment(new Horario());
+    }
+
+    private void changeFragment(Fragment fm) {
         android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.content, fm);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);

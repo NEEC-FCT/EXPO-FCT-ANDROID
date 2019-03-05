@@ -14,15 +14,15 @@ public class Loading extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loading);
         getSupportActionBar().hide();
-        new Handler().postDelayed(new Runnable(){
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void run(){
+            public void run() {
                 Intent homeIntent = new Intent(Loading.this, MainActivity.class);
                 startActivity(homeIntent);
                 finish();
             }
 
 
-        },LOGO_TIME_OUT);
+        }, LOGO_TIME_OUT);
     }
 }
