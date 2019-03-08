@@ -58,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void scrollToTop(View v) {
+
+        System.out.println("EasterEGG");
     }
 
     private void changeFragment(Fragment fm) {
