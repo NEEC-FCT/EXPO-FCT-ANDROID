@@ -7,6 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.neec.expo.fct.fragments.Cursos;
 import com.neec.expo.fct.fragments.Horario;
@@ -52,7 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        changeFragment(new Horario());
+        navigation.setSelectedItemId(R.id.navigation_mapa);
+        changeFragment(new Map());
+    }
+
+
     }
 
     private void changeFragment(Fragment fm) {

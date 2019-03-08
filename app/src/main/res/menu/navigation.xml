@@ -3,7 +3,6 @@
 
     <item
         android:id="@+id/navigation_horario"
-        android:checked="true"
         android:icon="@drawable/schedule"
         android:title="Horário" />
 
@@ -14,8 +13,8 @@
 
     <item
         android:id="@+id/navigation_mapa"
-        android:icon="@drawable/map"
-        android:title="Mapa" />
+        android:icon="@drawable/home"
+        android:title="Home" />
 
 
     <item
