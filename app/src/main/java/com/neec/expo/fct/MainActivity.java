@@ -2,12 +2,19 @@ package com.neec.expo.fct;
 
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.neec.expo.fct.fragments.Cursos;
 import com.neec.expo.fct.fragments.Horario;
@@ -17,6 +24,12 @@ import com.neec.expo.fct.fragments.Razoes;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    private int numberOfTaps = 0;
+    private long lastTapTimeMs = 0;
+    private long touchDownMs = 0;
+    private Handler handler;
+    private MotionEvent event;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -48,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        handler = new Handler();
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
 
@@ -60,7 +74,63 @@ public class MainActivity extends AppCompatActivity {
 
     public void scrollToTop(View v) {
 
-        System.out.println("EasterEGG");
+        Animation shake;
+        shake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake);
+
+        ImageView image;
+        image = (ImageView) v.findViewById(R.id.LogoNEEC);
+
+        image.startAnimation(shake); // starts animation
+
+        image.setOnTouchListener(new View.OnTouchListener() {
+
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        touchDownMs = System.currentTimeMillis();
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        handler.removeCallbacksAndMessages(null);
+
+                        if ((System.currentTimeMillis() - touchDownMs) > ViewConfiguration.getTapTimeout()) {
+                            //it was not a tap
+
+                            numberOfTaps = 0;
+                            lastTapTimeMs = 0;
+                            break;
+                        }
+
+                        if (numberOfTaps > 0
+                                && (System.currentTimeMillis() - lastTapTimeMs) < ViewConfiguration.getDoubleTapTimeout()) {
+                            numberOfTaps += 1;
+                        } else {
+                            numberOfTaps = 1;
+                        }
+
+                        lastTapTimeMs = System.currentTimeMillis();
+
+                        if (numberOfTaps == 4) {
+                            Toast.makeText(getApplicationContext(), "Abrir o Easter Egg", Toast.LENGTH_SHORT).show();
+                            //handle triple tap
+                        } else if (numberOfTaps == 2) {
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    //handle double tap
+                                    //    Toast.makeText(getApplicationContext(), "double", Toast.LENGTH_SHORT).show();
+                                }
+                            }, ViewConfiguration.getDoubleTapTimeout());
+                        }
+                }
+
+                return true;
+            }
+        });
+
+
     }
 
     private void changeFragment(Fragment fm) {
