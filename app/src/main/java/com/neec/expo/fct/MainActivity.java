@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         switch (FTOPEN) {
             case 1: changeFragment(new Map()); navigation.getMenu().getItem(2);break;// map=1;info=2;camera=3;razoes=4;cursos=5;
             case 2: changeFragment(new Information());navigation.getMenu().getItem(1).setChecked(true); break;
-            case 3: /*changeFragment(new Information());navigation.getMenu().getItem(2).setChecked(true);*/ break;//TODO mudar para o fragmento da camera
+          //  case 3:  abre a camara no outro lado
             case 4: changeFragment(new Razoes());navigation.getMenu().getItem(3).setChecked(true); break;
             case 5: changeFragment(new Cursos());navigation.getMenu().getItem(4).setChecked(true); break;
 
