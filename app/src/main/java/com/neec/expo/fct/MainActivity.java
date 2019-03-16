@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.neec.expo.fct.fragments.Cursos;
+import com.neec.expo.fct.fragments.EasterEgg;
 import com.neec.expo.fct.fragments.Horario;
 import com.neec.expo.fct.fragments.Information;
 import com.neec.expo.fct.fragments.Map;
@@ -110,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
 
         image.setOnTouchListener(new View.OnTouchListener() {
 
-
             @Override
             public boolean onTouch(View v, MotionEvent event) {
 
@@ -140,6 +140,8 @@ public class MainActivity extends AppCompatActivity {
 
                         if (numberOfTaps == 4) {
                             Toast.makeText(getApplicationContext(), "Abrir o Easter Egg", Toast.LENGTH_SHORT).show();
+                            changeFragment(new EasterEgg());
+
                             //handle triple tap
                         } else if (numberOfTaps == 2) {
                             handler.postDelayed(new Runnable() {
