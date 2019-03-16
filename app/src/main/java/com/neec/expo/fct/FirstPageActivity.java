@@ -1,10 +1,17 @@
 package com.neec.expo.fct;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import static com.neec.expo.fct.fragments.Map.MY_CAMERA_PERMISSION_CODE;
 
 public class FirstPageActivity extends AppCompatActivity {
     ImageButton map;
@@ -14,10 +21,22 @@ public class FirstPageActivity extends AppCompatActivity {
     ImageButton curso;
 
 
+    public boolean isInternetAvailable() {
+        ConnectivityManager cm = (ConnectivityManager) getApplication().getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        return cm.getActiveNetworkInfo() != null;
+
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
+        if(  !isInternetAvailable() ){
+            Intent intent = new Intent(getApplication(), semNet.class);
+            startActivity(intent);
+        }
         setContentView(R.layout.activity_first_page);
         map = findViewById(R.id.mapa);
         map.setOnClickListener(new View.OnClickListener() {
@@ -27,10 +46,12 @@ public class FirstPageActivity extends AppCompatActivity {
                 Intent intent = new Intent(FirstPageActivity.this, MainActivity.class);
                 intent.putExtra("FragmentToOpen", 1);// map=1;info=2;camera=3;razoes=4;cursos=5;
                 startActivity(intent);
+                finish();
             }
         });
 
         info = findViewById(R.id.Info);
+        info.setImageResource(R.drawable.inf0);
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,6 +59,7 @@ public class FirstPageActivity extends AppCompatActivity {
                 Intent intent = new Intent(FirstPageActivity.this, MainActivity.class);
                 intent.putExtra("FragmentToOpen", 2);// map=1;info=2;camera=3;razoes=4;cursos=5;
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -45,10 +67,22 @@ public class FirstPageActivity extends AppCompatActivity {
         cam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cam.setImageResource(R.drawable.camera_pressed);
-                Intent intent = new Intent(FirstPageActivity.this, MainActivity.class);
-                intent.putExtra("FragmentToOpen", 3);// map=1;info=2;camera=3;razoes=4;cursos=5;
-                startActivity(intent);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (checkSelfPermission(android.Manifest.permission.CAMERA)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        requestPermissions(new String[]{android.Manifest.permission.CAMERA},
+                                MY_CAMERA_PERMISSION_CODE);
+                        Toast.makeText( FirstPageActivity.this ,"Obrigado tente novamente" , Toast.LENGTH_LONG).show();
+                    } else {
+
+                        Intent myIntent = new Intent(FirstPageActivity.this, QrCodeScanner.class);
+                        startActivity(myIntent);
+                    }
+                } else {
+
+                    Intent myIntent = new Intent(FirstPageActivity.this, QrCodeScanner.class);
+                    startActivity(myIntent);
+                }
             }
         });
 
@@ -60,6 +94,7 @@ public class FirstPageActivity extends AppCompatActivity {
                 Intent intent = new Intent(FirstPageActivity.this, MainActivity.class);
                 intent.putExtra("FragmentToOpen", 4);// map=1;info=2;camera=3;razoes=4;cursos=5;
                 startActivity(intent);
+                finish();
             }
         });
         curso = findViewById(R.id.cursos);
@@ -70,6 +105,7 @@ public class FirstPageActivity extends AppCompatActivity {
                 Intent intent = new Intent(FirstPageActivity.this, MainActivity.class);
                 intent.putExtra("FragmentToOpen", 5);// map=1;info=2;camera=3;razoes=4;cursos=5;
                 startActivity(intent);
+                finish();
             }
         });
 
