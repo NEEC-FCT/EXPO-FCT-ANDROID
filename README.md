@@ -1,4 +1,10 @@
-# bottom-navigation-drawer
-Bottom Navigation Drawer Android design support library Sample Tutorial <br />
+# APP EXPO FCT
+Aplicação desenvolvida para o evento EXPO FCT pelo NEEC <br />
 
-Check out brief tutorial - <a href="http://www.i-visionblog.com/2017/03/bottom-navigation-drawer-view-android-example.html">Bottom Navigation Drawer View Example tutorial</a>
+Membros Participantes:
+Diogo Pereira
+Francisco Matos
+João Costa
+João Veloso
+Miguel Calado
+Martim Vieira
