@@ -53,7 +53,7 @@ public class EasterEgg extends Fragment {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
 
-        webView.loadUrl("https://expofct.neec-fct.com/cursos/");
+        webView.loadUrl("http://flappycreator.com/flappy.php?id=5c8d64cac3661");
 
         return view;
     }

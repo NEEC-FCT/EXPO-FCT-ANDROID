@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                         lastTapTimeMs = System.currentTimeMillis();
 
                         if (numberOfTaps == 4) {
-                            Toast.makeText(getApplicationContext(), "Abrir o Easter Egg", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Unlocking the Easter Egg", Toast.LENGTH_SHORT).show();
                             changeFragment(new EasterEgg());
 
                             //handle triple tap
