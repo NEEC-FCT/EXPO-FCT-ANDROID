@@ -19,6 +19,7 @@ public class FirstPageActivity extends AppCompatActivity {
     ImageButton cam;
     ImageButton razoes;
     ImageButton curso;
+    ImageButton horario;
 
 
     public boolean isInternetAvailable() {
@@ -104,6 +105,17 @@ public class FirstPageActivity extends AppCompatActivity {
                 curso.setImageResource(R.drawable.cursos_pressed);
                 Intent intent = new Intent(FirstPageActivity.this, MainActivity.class);
                 intent.putExtra("FragmentToOpen", 5);// map=1;info=2;camera=3;razoes=4;cursos=5;
+                startActivity(intent);
+                finish();
+            }
+        });
+        horario = findViewById(R.id.horario);
+        horario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                horario.setImageResource(R.drawable.schedule_pressed);
+                Intent intent = new Intent(FirstPageActivity.this, MainActivity.class);
+                intent.putExtra("FragmentToOpen", 6);// map=1;info=2;camera=3;razoes=4;cursos=5;horario=6
                 startActivity(intent);
                 finish();
             }

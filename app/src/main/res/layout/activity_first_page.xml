@@ -27,16 +27,12 @@
         android:id="@+id/cursos"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:scaleType="centerInside"
         android:background="@null"
-        app:layout_constraintEnd_toEndOf="@+id/Cam"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="@+id/Info"
         app:layout_constraintStart_toStartOf="@+id/Info"
-        app:layout_constraintTop_toBottomOf="@+id/Cam"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
         app:srcCompat="@drawable/cursos" />
 
     <ImageButton
@@ -74,14 +70,10 @@
         android:id="@+id/Razoes"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:scaleType="centerInside"
         android:background="@null"
-        app:layout_constraintEnd_toEndOf="@+id/Info"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="@+id/mapa"
         app:layout_constraintStart_toStartOf="@+id/mapa"
         app:layout_constraintTop_toBottomOf="@+id/mapa"
         app:srcCompat="@drawable/reasons" />
@@ -100,5 +92,84 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/Info"
         app:srcCompat="@drawable/mp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MAPA"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/mapa"
+        app:layout_constraintStart_toStartOf="@+id/mapa"
+        app:layout_constraintTop_toBottomOf="@+id/mapa" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8 RAZÕES"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/Razoes"
+        app:layout_constraintStart_toStartOf="@+id/Razoes"
+        app:layout_constraintTop_toBottomOf="@+id/Razoes" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INFO"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/Info"
+        app:layout_constraintStart_toStartOf="@+id/Info"
+        app:layout_constraintTop_toBottomOf="@+id/Info" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CURSOS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/cursos"
+        app:layout_constraintStart_toStartOf="@+id/cursos"
+        app:layout_constraintTop_toBottomOf="@+id/cursos" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QR CAMERA"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/Cam"
+        app:layout_constraintStart_toStartOf="@+id/Cam"
+        app:layout_constraintTop_toBottomOf="@+id/Cam" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HORÁRIO"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/horario"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/horario"
+        app:layout_constraintTop_toBottomOf="@+id/horario" />
+
+    <ImageButton
+        android:id="@+id/horario"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerInside"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="@+id/Cam"
+        app:layout_constraintStart_toStartOf="@+id/Cam"
+        app:layout_constraintTop_toTopOf="@+id/textView6"
+        app:srcCompat="@drawable/schedul" />
 
 </android.support.constraint.ConstraintLayout>

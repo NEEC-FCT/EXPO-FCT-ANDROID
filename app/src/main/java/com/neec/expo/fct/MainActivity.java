@@ -88,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
                 changeFragment(new Cursos());
                 navigation.getMenu().getItem(4).setChecked(true);
                 break;
+            case 6:
+                changeFragment(new Horario());
+                navigation.getMenu().getItem(0).setChecked(true);
+                break;
 
         }
 
