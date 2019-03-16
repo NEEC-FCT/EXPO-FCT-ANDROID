@@ -25,6 +25,12 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".semNet"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".QrCodeScanner"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
