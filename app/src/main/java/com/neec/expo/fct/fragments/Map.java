@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,7 +18,6 @@ import android.webkit.WebView;
 import com.github.clans.fab.FloatingActionButton;
 import com.neec.expo.fct.QrCodeScanner;
 import com.neec.expo.fct.R;
-import com.neec.expo.fct.qrcode.QRCodeEncoder;
 import com.neec.expo.fct.semNet;
 
 public class Map extends Fragment {
@@ -42,8 +40,8 @@ public class Map extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        if(  !isInternetAvailable() ){
-            Intent intent = new Intent( getContext() ,  semNet.class);
+        if (!isInternetAvailable()) {
+            Intent intent = new Intent(getContext(), semNet.class);
             startActivity(intent);
         }
 
@@ -54,8 +52,7 @@ public class Map extends Fragment {
 
         if (Build.VERSION.SDK_INT >= 19) {
             webView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
-        }
-        else {
+        } else {
             webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         }
 
@@ -69,7 +66,6 @@ public class Map extends Fragment {
         FloatingActionButton qrcode = (FloatingActionButton) view.findViewById(R.id.qrcode);
 
 
-
         team.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
@@ -79,7 +75,6 @@ public class Map extends Fragment {
 
             }
         });
-
 
 
         qrcode.setOnClickListener(new View.OnClickListener() {

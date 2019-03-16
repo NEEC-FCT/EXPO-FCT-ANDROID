@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -33,7 +33,7 @@ public class FirstPageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
-        if(  !isInternetAvailable() ){
+        if (!isInternetAvailable()) {
             Intent intent = new Intent(getApplication(), semNet.class);
             startActivity(intent);
         }
@@ -72,7 +72,7 @@ public class FirstPageActivity extends AppCompatActivity {
                             != PackageManager.PERMISSION_GRANTED) {
                         requestPermissions(new String[]{android.Manifest.permission.CAMERA},
                                 MY_CAMERA_PERMISSION_CODE);
-                        Toast.makeText( FirstPageActivity.this ,"Obrigado tente novamente" , Toast.LENGTH_LONG).show();
+                        Toast.makeText(FirstPageActivity.this, "Obrigado tente novamente", Toast.LENGTH_LONG).show();
                     } else {
 
                         Intent myIntent = new Intent(FirstPageActivity.this, QrCodeScanner.class);
@@ -108,9 +108,6 @@ public class FirstPageActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
-
 
 
     }

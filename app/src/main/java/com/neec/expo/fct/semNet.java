@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class semNet extends AppCompatActivity  {
+public class semNet extends AppCompatActivity {
 
 
     public boolean isInternetAvailable() {
@@ -30,7 +30,7 @@ public class semNet extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
 
-                if(isInternetAvailable()) {
+                if (isInternetAvailable()) {
                     Intent intent = new Intent(semNet.this, MainActivity.class);
 
                     semNet.this.startActivity(intent);

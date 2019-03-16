@@ -33,8 +33,8 @@ public class Razoes extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        if(  !isInternetAvailable() ){
-            Intent intent = new Intent( getContext() ,  semNet.class);
+        if (!isInternetAvailable()) {
+            Intent intent = new Intent(getContext(), semNet.class);
             startActivity(intent);
         }
 
@@ -46,8 +46,7 @@ public class Razoes extends Fragment {
 
         if (Build.VERSION.SDK_INT >= 19) {
             webView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
-        }
-        else {
+        } else {
             webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         }
 

@@ -12,9 +12,32 @@ package com.neec.expo.fct.qrcode;
 // * distributed under the License is distributed on an "AS IS" BASIS,
 
 
-        import android.provider.ContactsContract;
+import android.provider.ContactsContract;
 
 public final class Contents {
+    public static final String URL_KEY = "URL_KEY";
+    public static final String NOTE_KEY = "NOTE_KEY";
+    // When using Type.CONTACT, these arrays provide the keys for adding or retrieving multiple
+    // phone numbers and addresses.
+    public static final String[] PHONE_KEYS = {
+            ContactsContract.Intents.Insert.PHONE, ContactsContract.Intents.Insert.SECONDARY_PHONE,
+            ContactsContract.Intents.Insert.TERTIARY_PHONE
+    };
+    public static final String[] PHONE_TYPE_KEYS = {
+            ContactsContract.Intents.Insert.PHONE_TYPE,
+            ContactsContract.Intents.Insert.SECONDARY_PHONE_TYPE,
+            ContactsContract.Intents.Insert.TERTIARY_PHONE_TYPE
+    };
+    public static final String[] EMAIL_KEYS = {
+            ContactsContract.Intents.Insert.EMAIL, ContactsContract.Intents.Insert.SECONDARY_EMAIL,
+            ContactsContract.Intents.Insert.TERTIARY_EMAIL
+    };
+    public static final String[] EMAIL_TYPE_KEYS = {
+            ContactsContract.Intents.Insert.EMAIL_TYPE,
+            ContactsContract.Intents.Insert.SECONDARY_EMAIL_TYPE,
+            ContactsContract.Intents.Insert.TERTIARY_EMAIL_TYPE
+    };
+
     private Contents() {
     }
 
@@ -59,32 +82,4 @@ public final class Contents {
         private Type() {
         }
     }
-
-    public static final String URL_KEY = "URL_KEY";
-
-    public static final String NOTE_KEY = "NOTE_KEY";
-
-    // When using Type.CONTACT, these arrays provide the keys for adding or retrieving multiple
-    // phone numbers and addresses.
-    public static final String[] PHONE_KEYS = {
-            ContactsContract.Intents.Insert.PHONE, ContactsContract.Intents.Insert.SECONDARY_PHONE,
-            ContactsContract.Intents.Insert.TERTIARY_PHONE
-    };
-
-    public static final String[] PHONE_TYPE_KEYS = {
-            ContactsContract.Intents.Insert.PHONE_TYPE,
-            ContactsContract.Intents.Insert.SECONDARY_PHONE_TYPE,
-            ContactsContract.Intents.Insert.TERTIARY_PHONE_TYPE
-    };
-
-    public static final String[] EMAIL_KEYS = {
-            ContactsContract.Intents.Insert.EMAIL, ContactsContract.Intents.Insert.SECONDARY_EMAIL,
-            ContactsContract.Intents.Insert.TERTIARY_EMAIL
-    };
-
-    public static final String[] EMAIL_TYPE_KEYS = {
-            ContactsContract.Intents.Insert.EMAIL_TYPE,
-            ContactsContract.Intents.Insert.SECONDARY_EMAIL_TYPE,
-            ContactsContract.Intents.Insert.TERTIARY_EMAIL_TYPE
-    };
 }

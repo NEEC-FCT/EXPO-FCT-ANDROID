@@ -33,8 +33,8 @@ public class Information extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        if(  !isInternetAvailable() ){
-            Intent intent = new Intent( getContext() ,  semNet.class);
+        if (!isInternetAvailable()) {
+            Intent intent = new Intent(getContext(), semNet.class);
             startActivity(intent);
         }
 
@@ -42,13 +42,11 @@ public class Information extends Fragment {
         View view = inflater.inflate(R.layout.fragment_cursos, container, false);
 
 
-
         WebView webView = (WebView) view.findViewById(R.id.webView);
 
         if (Build.VERSION.SDK_INT >= 19) {
             webView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
-        }
-        else {
+        } else {
             webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         }
 
