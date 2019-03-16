@@ -22,7 +22,7 @@
     <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/menu"
 
-        android:layout_width="match_parent"
+        android:layout_width="60dp"
         android:layout_height="0dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
@@ -31,9 +31,6 @@
 
         android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/webView"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toBottomOf="@+id/webView"
@@ -69,7 +66,7 @@
         fab:menu_labels_singleLine="false"
         fab:menu_labels_textColor="#FFFFFF"
         fab:menu_labels_textSize="14sp"
-        fab:menu_openDirection="up"
+        fab:menu_openDirection="down"
         fab:menu_shadowColor="#66000000"
         fab:menu_shadowRadius="4dp"
         fab:menu_shadowXOffset="1dp"
@@ -84,7 +81,7 @@
             android:scaleType="center"
             android:src="@drawable/qrcode"
             fab:fab_colorNormal="@android:color/transparent"
-            fab:fab_label="QR Code"
+
             fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -94,7 +91,6 @@
             android:scaleType="center"
             android:src="@drawable/team"
             fab:fab_colorNormal="@android:color/transparent"
-            fab:fab_label="Equipa"
             fab:fab_size="mini" />
 
     </com.github.clans.fab.FloatingActionMenu>
