@@ -74,6 +74,7 @@ public class Map extends Fragment {
             public void onClick(View v) {
                 // Perform action on click
                 Log.d("FAB", "Team");
+                changeFragment(new Team());
 
 
             }
