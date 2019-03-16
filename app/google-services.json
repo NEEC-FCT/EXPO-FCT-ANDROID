@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "313883127109",
+    "firebase_url": "https://expo-fct-2019.firebaseio.com",
+    "project_id": "expo-fct-2019",
+    "storage_bucket": "expo-fct-2019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313883127109:android:0e006967bcc3bf43",
+        "android_client_info": {
+          "package_name": "com.neec.expo.fct"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313883127109-5u9288t4ee4v9fqol8hv0lc190gssj4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIRLzwE2pjAq_48y09rJ4i9v6oakXVDS0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
