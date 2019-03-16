@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.neec.expo.fct.fragments"
+        applicationId "com.neec.expo.fct"
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
