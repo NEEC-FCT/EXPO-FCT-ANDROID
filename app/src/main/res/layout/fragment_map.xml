@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -21,35 +22,26 @@
 
     <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/menu"
-
-        android:layout_width="60dp"
-        android:layout_height="0dp"
+        android:layout_width="86dp"
+        android:layout_height="186dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom|right"
-
-
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/webView"
-
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         fab:menu_animationDelayPerItem="50"
         fab:menu_backgroundColor="@android:color/transparent"
         fab:menu_buttonSpacing="0dp"
         fab:menu_colorNormal="#0398d8"
-        fab:menu_colorPressed="#0089c4"
-        fab:menu_colorRipple="#99FFFFFF"
-        fab:menu_fab_hide_animation="@anim/jump_to_down"
-        fab:menu_fab_show_animation="@anim/jump_from_down"
-        fab:menu_fab_size="normal"
+        fab:menu_colorPressed="@android:color/transparent"
+        fab:menu_colorRipple="#0398d8"
+        fab:menu_fab_hide_animation="@anim/jump_from_down"
+        fab:menu_fab_label=""
+        fab:menu_fab_show_animation="@anim/jump_to_down"
+        fab:menu_fab_size="mini"
         fab:menu_icon="@drawable/fab_add"
-        fab:menu_labels_colorNormal="#333333"
-        fab:menu_labels_colorPressed="#444444"
-        fab:menu_labels_colorRipple="#66FFFFFF"
+        fab:menu_labels_colorNormal="#0398d8"
+        fab:menu_labels_colorPressed="#0398d8"
+        fab:menu_labels_colorRipple="#0398d8"
         fab:menu_labels_cornerRadius="3dp"
         fab:menu_labels_ellipsize="none"
         fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
@@ -64,6 +56,7 @@
         fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
         fab:menu_labels_showShadow="true"
         fab:menu_labels_singleLine="false"
+
         fab:menu_labels_textColor="#FFFFFF"
         fab:menu_labels_textSize="14sp"
         fab:menu_openDirection="down"
@@ -73,24 +66,24 @@
         fab:menu_shadowYOffset="3dp"
         fab:menu_showShadow="true">
 
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/team"
+            fab:fab_colorNormal="@android:color/transparent"
+            fab:fab_colorPressed="@android:color/transparent"
+            fab:fab_label=""
+            fab:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/qrcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:scaleType="center"
             android:src="@drawable/qrcode"
             fab:fab_colorNormal="@android:color/transparent"
-
-            fab:fab_size="mini" />
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/team"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="center"
-            android:src="@drawable/team"
-            fab:fab_colorNormal="@android:color/transparent"
+            fab:fab_colorPressed="@android:color/transparent"
+            fab:fab_label=""
             fab:fab_size="mini" />
 
     </com.github.clans.fab.FloatingActionMenu>
