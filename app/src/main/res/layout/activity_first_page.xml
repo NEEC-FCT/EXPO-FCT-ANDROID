@@ -9,18 +9,21 @@
     <ImageView
         android:id="@+id/ExpoLogo"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="245dp"
         android:layout_marginStart="62dp"
         android:layout_marginLeft="62dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="62dp"
         android:layout_marginRight="62dp"
+        android:layout_marginBottom="8dp"
         android:background="@null"
         android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043"
         app:srcCompat="@drawable/logoexpo" />
 
     <ImageButton
