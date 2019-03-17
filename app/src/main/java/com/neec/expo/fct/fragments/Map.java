@@ -16,6 +16,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.github.clans.fab.FloatingActionButton;
+import com.neec.expo.fct.FirstPageActivity;
+import com.neec.expo.fct.MainActivity;
 import com.neec.expo.fct.QrCodeScanner;
 import com.neec.expo.fct.R;
 import com.neec.expo.fct.semNet;
@@ -92,11 +94,9 @@ public class Map extends Fragment {
                         getActivity().startActivity(myIntent);
                     }
                 } else {
-
                     Intent myIntent = new Intent(getActivity(), QrCodeScanner.class);
                     getActivity().startActivity(myIntent);
                 }
-
 
             }
         });
