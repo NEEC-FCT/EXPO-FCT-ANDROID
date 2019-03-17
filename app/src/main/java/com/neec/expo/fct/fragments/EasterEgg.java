@@ -12,7 +12,9 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 
+import com.neec.expo.fct.MainActivity;
 import com.neec.expo.fct.R;
 import com.neec.expo.fct.semNet;
 
@@ -42,6 +44,7 @@ public class EasterEgg extends Fragment {
         View view = inflater.inflate(R.layout.fragment_egg, container, false);
 
 
+
         WebView webView = (WebView) view.findViewById(R.id.webView);
 
         if (Build.VERSION.SDK_INT >= 19) {
@@ -54,7 +57,7 @@ public class EasterEgg extends Fragment {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
 
-        webView.loadUrl("http://flappycreator.com/flappy.php?id=5c8d67e73a40b");
+        webView.loadUrl("https://expofct.neec-fct.com/flappy/");
 
         return view;
     }
