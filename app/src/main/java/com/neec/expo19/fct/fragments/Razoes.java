@@ -1,4 +1,4 @@
-package com.neec.expo.fct.fragments;
+package com.neec.expo19.fct.fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,18 +11,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
 
-import com.neec.expo.fct.MainActivity;
 import com.neec.expo.fct.R;
-import com.neec.expo.fct.semNet;
+import com.neec.expo19.fct.semNet;
 
-public class EasterEgg extends Fragment {
+public class Razoes extends Fragment {
 
-    public EasterEgg() {
+
+    public Razoes() {
         // Required empty public constructor
     }
+
 
     public boolean isInternetAvailable() {
         ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -39,10 +38,8 @@ public class EasterEgg extends Fragment {
             startActivity(intent);
         }
 
-
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_egg, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_cursos, container, false);
 
 
         WebView webView = (WebView) view.findViewById(R.id.webView);
@@ -55,12 +52,11 @@ public class EasterEgg extends Fragment {
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        webSettings.setDomStorageEnabled(true);
+        webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
 
-        webView.loadUrl("https://expofct.neec-fct.com/flappy/");
+        webView.loadUrl("https://expofct.neec-fct.com/razoes/");
 
         return view;
     }
-
 
 }

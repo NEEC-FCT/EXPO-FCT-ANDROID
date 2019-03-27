@@ -1,4 +1,4 @@
-package com.neec.expo.fct.qrcode;
+package com.neec.expo19.fct.qrcode;
 
 
 import android.graphics.Bitmap;

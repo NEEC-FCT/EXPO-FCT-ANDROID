@@ -1,4 +1,4 @@
-package com.neec.expo.fct.fragments;
+package com.neec.expo19.fct.fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,15 +13,14 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.neec.expo.fct.R;
-import com.neec.expo.fct.semNet;
+import com.neec.expo19.fct.semNet;
 
-public class Razoes extends Fragment {
+public class Horario extends Fragment {
 
 
-    public Razoes() {
+    public Horario() {
         // Required empty public constructor
     }
-
 
     public boolean isInternetAvailable() {
         ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -54,7 +53,7 @@ public class Razoes extends Fragment {
         webSettings.setJavaScriptEnabled(true);
         webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
 
-        webView.loadUrl("https://expofct.neec-fct.com/razoes/");
+        webView.loadUrl("https://expofct.neec-fct.com/schedule/");
 
         return view;
     }

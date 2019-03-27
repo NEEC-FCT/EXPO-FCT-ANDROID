@@ -1,4 +1,4 @@
-package com.neec.expo.fct;
+package com.neec.expo19.fct;
 
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -18,13 +18,14 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.neec.expo.fct.fragments.Cursos;
-import com.neec.expo.fct.fragments.EasterEgg;
-import com.neec.expo.fct.fragments.Horario;
-import com.neec.expo.fct.fragments.Information;
-import com.neec.expo.fct.fragments.Map;
-import com.neec.expo.fct.fragments.Razoes;
-import com.neec.expo.fct.fragments.Team;
+import com.neec.expo.fct.R;
+import com.neec.expo19.fct.fragments.Cursos;
+import com.neec.expo19.fct.fragments.EasterEgg;
+import com.neec.expo19.fct.fragments.Horario;
+import com.neec.expo19.fct.fragments.Information;
+import com.neec.expo19.fct.fragments.Map;
+import com.neec.expo19.fct.fragments.Razoes;
+import com.neec.expo19.fct.fragments.Team;
 
 public class MainActivity extends AppCompatActivity {
 

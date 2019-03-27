@@ -1,9 +1,11 @@
-package com.neec.expo.fct;
+package com.neec.expo19.fct;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
+
+import com.neec.expo.fct.R;
 
 public class Loading extends AppCompatActivity {
 

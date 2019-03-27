@@ -1,4 +1,4 @@
-package com.neec.expo.fct;
+package com.neec.expo19.fct;
 
 import android.content.Intent;
 import android.net.Uri;

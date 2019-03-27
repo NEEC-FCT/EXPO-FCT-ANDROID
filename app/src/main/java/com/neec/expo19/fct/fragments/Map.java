@@ -1,16 +1,12 @@
-package com.neec.expo.fct.fragments;
+package com.neec.expo19.fct.fragments;
 
-import android.annotation.SuppressLint;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +16,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.github.clans.fab.FloatingActionButton;
-import com.neec.expo.fct.QrCodeScanner;
 import com.neec.expo.fct.R;
-import com.neec.expo.fct.semNet;
+import com.neec.expo19.fct.semNet;
 
 public class Map extends Fragment {
 

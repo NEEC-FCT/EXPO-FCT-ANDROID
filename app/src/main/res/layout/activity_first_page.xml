@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.neec.expo.fct.FirstPageActivity">
+    tools:context="com.neec.expo.fct.com.neec.expo19.fct.FirstPageActivity">
 
     <ImageView
         android:id="@+id/ExpoLogo"

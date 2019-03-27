@@ -1,4 +1,4 @@
-package com.neec.expo.fct.fragments;
+package com.neec.expo19.fct.fragments;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,12 +13,11 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.neec.expo.fct.R;
-import com.neec.expo.fct.semNet;
+import com.neec.expo19.fct.semNet;
 
-public class Horario extends Fragment {
+public class EasterEgg extends Fragment {
 
-
-    public Horario() {
+    public EasterEgg() {
         // Required empty public constructor
     }
 
@@ -37,8 +36,10 @@ public class Horario extends Fragment {
             startActivity(intent);
         }
 
+
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_cursos, container, false);
+        View view = inflater.inflate(R.layout.fragment_egg, container, false);
+
 
 
         WebView webView = (WebView) view.findViewById(R.id.webView);
@@ -51,11 +52,12 @@ public class Horario extends Fragment {
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
+        webSettings.setDomStorageEnabled(true);
 
-        webView.loadUrl("https://expofct.neec-fct.com/schedule/");
+        webView.loadUrl("https://expofct.neec-fct.com/flappy/");
 
         return view;
     }
+
 
 }

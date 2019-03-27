@@ -1,4 +1,4 @@
-package com.neec.expo.fct;
+package com.neec.expo19.fct;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import com.neec.expo.fct.R;
 
 public class semNet extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.neec.expo.fct;
+package com.neec.expo19.fct;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +11,9 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import static com.neec.expo.fct.fragments.Map.MY_CAMERA_PERMISSION_CODE;
+import com.neec.expo.fct.R;
+
+import static com.neec.expo19.fct.fragments.Map.MY_CAMERA_PERMISSION_CODE;
 
 public class FirstPageActivity extends AppCompatActivity {
     ImageButton map;
