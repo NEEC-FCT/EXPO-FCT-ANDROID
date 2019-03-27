@@ -162,6 +162,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    @Override
+    public void onBackPressed() {
+        Log.d("CDA", "onBackPressed Called");
+        Intent intent = new Intent( MainActivity.this, FirstPageActivity.class);
+        startActivity(intent);
+    }
+
     private void changeFragment(Fragment fm) {
         android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.content, fm);
