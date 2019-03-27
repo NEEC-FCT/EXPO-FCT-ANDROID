@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -23,6 +24,7 @@ import com.neec.expo.fct.fragments.Horario;
 import com.neec.expo.fct.fragments.Information;
 import com.neec.expo.fct.fragments.Map;
 import com.neec.expo.fct.fragments.Razoes;
+import com.neec.expo.fct.fragments.Team;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private long lastTapTimeMs = 0;
     private long touchDownMs = 0;
     private Handler handler;
-    private MotionEvent event;
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -46,7 +48,9 @@ public class MainActivity extends AppCompatActivity {
                     changeFragment(new Information());
                     return true;
                 case R.id.navigation_mapa:
-                    changeFragment(new Map());
+                    Map mapa = new Map();
+                    mapa.setURL(3);
+                    changeFragment( mapa );
                     return true;
                 case R.id.navigation_razoes:
                     changeFragment(new Razoes());
@@ -74,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
         int FTOPEN = getIntent().getIntExtra("FragmentToOpen", 1);
         switch (FTOPEN) {
             case 1:
-                changeFragment(new Map());
+                Map mapa = new Map();
+                mapa.setURL(0);
+                changeFragment( mapa );
                 navigation.getMenu().getItem(2);
                 break;// map=1;info=2;camera=3;razoes=4;cursos=5;
             case 2:
@@ -93,6 +99,16 @@ public class MainActivity extends AppCompatActivity {
             case 6:
                 changeFragment(new Horario());
                 navigation.getMenu().getItem(0).setChecked(true);
+                break;
+            case 7:
+                Map mapa1 = new Map();
+                mapa1.setURL(2);
+                changeFragment( mapa1 );
+                navigation.getMenu().getItem(2).setChecked(true);
+                break;
+            case 8:
+                changeFragment(new Team());
+                navigation.getMenu().getItem(2).setChecked(true);
                 break;
 
         }

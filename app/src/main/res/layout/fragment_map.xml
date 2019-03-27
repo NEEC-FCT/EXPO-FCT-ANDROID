@@ -67,6 +67,38 @@
         fab:menu_showShadow="true">
 
         <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/infofab"
+            fab:fab_colorNormal="@android:color/transparent"
+            fab:fab_colorPressed="@android:color/transparent"
+            fab:fab_label=""
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/atividades"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/allfab"
+            fab:fab_colorNormal="@android:color/transparent"
+            fab:fab_colorPressed="@android:color/transparent"
+            fab:fab_label=""
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/nucleos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nucleosfab"
+            fab:fab_colorNormal="@android:color/transparent"
+            fab:fab_colorPressed="@android:color/transparent"
+            fab:fab_label=""
+            fab:fab_size="mini" />
+
+
+
+        <com.github.clans.fab.FloatingActionButton
             android:id="@+id/team"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,6 +117,9 @@
             fab:fab_colorPressed="@android:color/transparent"
             fab:fab_label=""
             fab:fab_size="mini" />
+
+
+
 
     </com.github.clans.fab.FloatingActionMenu>
 
