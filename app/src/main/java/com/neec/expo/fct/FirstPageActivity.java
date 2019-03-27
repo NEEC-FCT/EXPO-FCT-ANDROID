@@ -21,6 +21,9 @@ public class FirstPageActivity extends AppCompatActivity {
     ImageButton curso;
     ImageButton horario;
 
+    ImageButton nucleos;
+    ImageButton equipa;
+
 
     public boolean isInternetAvailable() {
         ConnectivityManager cm = (ConnectivityManager) getApplication().getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -39,6 +42,31 @@ public class FirstPageActivity extends AppCompatActivity {
             startActivity(intent);
         }
         setContentView(R.layout.activity_first_page);
+
+        nucleos = findViewById(R.id.nucleo);
+        nucleos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            //    map.setImageResource(R.drawable.map_pressed);
+                Intent intent = new Intent(FirstPageActivity.this, MainActivity.class);
+                intent.putExtra("FragmentToOpen", 7);// map=1;info=2;camera=3;razoes=4;cursos=5;
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        equipa = findViewById(R.id.team);
+        equipa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              //  map.setImageResource(R.drawable.map_pressed);
+                Intent intent = new Intent(FirstPageActivity.this, MainActivity.class);
+                intent.putExtra("FragmentToOpen", 8);// map=1;info=2;camera=3;razoes=4;cursos=5;
+                startActivity(intent);
+                finish();
+            }
+        });
+
         map = findViewById(R.id.mapa);
         map.setOnClickListener(new View.OnClickListener() {
             @Override
