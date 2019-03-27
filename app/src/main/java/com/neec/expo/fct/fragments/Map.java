@@ -97,8 +97,6 @@ public class Map extends Fragment {
 
         webView.loadUrl(currentURL);
 
-        FloatingActionButton team = (FloatingActionButton) view.findViewById(R.id.team);
-        FloatingActionButton qrcode = (FloatingActionButton) view.findViewById(R.id.qrcode);
 
         FloatingActionButton allFAB = (FloatingActionButton) view.findViewById(R.id.all);
         FloatingActionButton atividades = (FloatingActionButton) view.findViewById(R.id.atividades);
@@ -130,7 +128,7 @@ public class Map extends Fragment {
             }
         });
 
-        team.setOnClickListener(new View.OnClickListener() {
+     /*   team.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
                 Log.d("FAB", "Team");
@@ -161,7 +159,7 @@ public class Map extends Fragment {
                 }
 
             }
-        });
+        });*/
 
 
         return view;
