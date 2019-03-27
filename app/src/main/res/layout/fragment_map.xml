@@ -98,29 +98,6 @@
 
 
 
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/team"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/team"
-            fab:fab_colorNormal="@android:color/transparent"
-            fab:fab_colorPressed="@android:color/transparent"
-            fab:fab_label=""
-            fab:fab_size="mini" />
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/qrcode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/qrcode"
-            fab:fab_colorNormal="@android:color/transparent"
-            fab:fab_colorPressed="@android:color/transparent"
-            fab:fab_label=""
-            fab:fab_size="mini" />
-
-
-
-
     </com.github.clans.fab.FloatingActionMenu>
 
 
