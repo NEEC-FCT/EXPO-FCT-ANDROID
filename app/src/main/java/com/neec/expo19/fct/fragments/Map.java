@@ -24,7 +24,7 @@ public class Map extends Fragment {
     public static final int MY_CAMERA_PERMISSION_CODE = 2;
     String currentURL = "https://www.google.com/maps/d/viewer?mid=1LC7hMeFmnZ8cj4XGiMAEBam7WHZZIn3k&ll=38.66073135349911%2C-9.205763350000097&z=17";
     String Nucleos = "https://www.google.com/maps/d/u/0/viewer?mid=1yiEFH_jHV-7Ea4S6VlxUhG_WPkFdopPv&ll=38.661187223123896%2C-9.206034335656113&z=17";
-    String RestFCT = "https://www.google.com/maps/d/u/0/viewer?mid=1EBVZIb43YRKtlhJZFm1m_TxBao4xNeOy&ll=38.66095008260262%2C-9.20509986148852&z=17";
+    String RestFCT = "https://www.google.com/maps/d/u/0/viewer?mid=1EBVZIb43YRKtlhJZFm1m_TxBao4xNeOy&ll=38.66095008260262%2C-9.20509986148852&z=17&fbclid=IwAR1jgH9w90v-_sFNz_0wGMxnJqB75jSdrVa9RCkJbgWJdfN0dPFVtdHYKU0";
     String FCTNormal = "https://www.google.com/maps/d/u/0/viewer?mid=1LC7hMeFmnZ8cj4XGiMAEBam7WHZZIn3k&ll=38.660549041189526%2C-9.204203388254882&z=18";
     String ALL = "https://www.google.com/maps/d/viewer?mid=1LC7hMeFmnZ8cj4XGiMAEBam7WHZZIn3k&ll=38.66073135349911%2C-9.205763350000097&z=17";
     public Map() {
@@ -100,7 +100,7 @@ public class Map extends Fragment {
         allFAB.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
-                webView.loadUrl(ALL);
+                webView.loadUrl( ALL);
 
 
             }
@@ -108,8 +108,8 @@ public class Map extends Fragment {
         atividades.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
-                webView.loadUrl(RestFCT);
 
+                webView.loadUrl(RestFCT);
 
             }
         });

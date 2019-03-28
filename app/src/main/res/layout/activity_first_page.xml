@@ -28,7 +28,7 @@
 
     <ImageButton
         android:id="@+id/cursos"
-        android:layout_width="80dp"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginTop="24dp"
         android:background="@null"
@@ -71,7 +71,7 @@
 
     <ImageButton
         android:id="@+id/Razoes"
-        android:layout_width="80dp"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginTop="24dp"
         android:background="@null"
@@ -172,11 +172,11 @@
 
     <ImageButton
         android:id="@+id/horario"
-        android:layout_width="80dp"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginTop="24dp"
-        android:scaleType="centerInside"
         android:background="@null"
+        android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="@+id/Cam"
         app:layout_constraintStart_toStartOf="@+id/Cam"
         app:layout_constraintTop_toTopOf="@+id/textView6"
@@ -214,11 +214,11 @@
 
     <ImageButton
         android:id="@+id/team"
-        android:layout_width="80dp"
+        android:layout_width="0dp"
         android:layout_height="80dp"
         android:layout_marginTop="24dp"
-        android:scaleType="centerInside"
         android:background="@null"
+        android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="@+id/nucleo"
         app:layout_constraintStart_toStartOf="@+id/nucleo"
         app:layout_constraintTop_toTopOf="@+id/textView10"

@@ -9,7 +9,7 @@
     <item
         android:id="@+id/navigation_info"
         android:icon="@drawable/info"
-        android:title="Informação" />
+        android:title="Atividades" />
 
     <item
         android:id="@+id/navigation_mapa"
